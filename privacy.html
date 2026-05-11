@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — AudioWitness</title>
+<style>
+  body {
+    background: #1C2333;
+    color: #FFFFFF;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+  h1 {
+    color: #2DD4BF;
+    font-size: 32px;
+    margin: 0 0 8px 0;
+  }
+  .updated {
+    color: #94A3B8;
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+  h2 {
+    color: #2DD4BF;
+    font-size: 20px;
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+  p { color: #FFFFFF; margin: 0 0 12px 0; }
+  ul { color: #FFFFFF; padding-left: 24px; }
+  li { margin-bottom: 6px; }
+  a { color: #2DD4BF; }
+  .footer {
+    text-align: center;
+    color: #94A3B8;
+    font-size: 14px;
+    padding: 24px;
+    border-top: 1px solid #263045;
+    margin-top: 48px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: May 2026</p>
+
+  <p>AudioWitness is a personal safety and evidence capture app. This policy explains what data the app handles, where it lives, and who can see it.</p>
+
+  <h2>Data the app records</h2>
+  <ul>
+    <li>Audio recordings (AAC/M4A format)</li>
+    <li>Timestamp of each recording</li>
+    <li>GPS location at the time of recording (embedded in the audio file's metadata and stored alongside it)</li>
+    <li>Optional user-added tags (text labels at specific points in a recording)</li>
+    <li>Trusted contact details you add to the app (name, email address, phone number)</li>
+  </ul>
+
+  <h2>Where data is stored</h2>
+  <p>Recordings and metadata are stored locally on your device. If you choose to connect your Google account, recordings are also backed up to a dedicated AudioWitness folder in your own Google Drive. AudioWitness never uploads your data to any server or third-party service operated by us. We have no servers, no databases, and no access to your recordings.</p>
+
+  <h2>Sharing recordings</h2>
+  <p>You control all sharing. When you share a recording — either manually via the Share button or automatically via Direct Send — the recording is delivered using:</p>
+  <ul>
+    <li>SMS via your phone's standard SMS system</li>
+    <li>Email sent from your own Gmail account using the Gmail API (only if you grant the relevant permission)</li>
+    <li>Google Drive sharing links</li>
+  </ul>
+  <p>The recipient receives a link to the file on your Google Drive and, where applicable, a structured JSON file containing the recording's metadata (timestamp, GPS, tags). AudioWitness does not see, store, or proxy any of this data — it travels directly from your account/device to the recipient.</p>
+
+  <h2>Google account permissions</h2>
+  <p>If you connect your Google account, AudioWitness requests two permissions:</p>
+  <ul>
+    <li><strong>Drive access (drive.file):</strong> Limited to files the app creates. AudioWitness cannot see or modify any other files in your Drive.</li>
+    <li><strong>Gmail send (gmail.send):</strong> Optional. Only used to send Direct Send emails on your behalf from your own account. AudioWitness cannot read your inbox, contacts, or any other email data.</li>
+  </ul>
+  <p>You can revoke either permission at any time from the app's Settings screen, or from your <a href="https://myaccount.google.com/permissions">Google account permissions page</a>.</p>
+
+  <h2>Trusted contacts</h2>
+  <p>Contact details you add are stored only on your device. AudioWitness does not transmit them anywhere unless you actively use them to share a recording.</p>
+
+  <h2>Permissions the app requests</h2>
+  <ul>
+    <li>Microphone — to record audio</li>
+    <li>Location — to embed GPS in recordings</li>
+    <li>SMS send — for Direct Send via SMS</li>
+    <li>Notifications — for service status and recording confirmations</li>
+    <li>Battery optimization exemption — to ensure the triple-press trigger works reliably while the screen is off (this is the app's core safety function)</li>
+  </ul>
+
+  <h2>Children's privacy</h2>
+  <p>AudioWitness is not directed at children under 13 and does not knowingly collect data from them.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If the policy changes, the "Last updated" date at the top will reflect this. Material changes will be announced in the app.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy or the app: <a href="mailto:audiowitness.app@gmail.com">audiowitness.app@gmail.com</a></p>
+</div>
+
+<div class="footer">
+  AudioWitness &middot; <a href="/">Home</a>
+</div>
+</body>
+</html>
