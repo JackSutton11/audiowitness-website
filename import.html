@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opening AudioWitness…</title>
+<style>
+  body {
+    background: #1C2333;
+    color: #FFFFFF;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    text-align: center;
+  }
+  h1 { color: #2DD4BF; font-size: 24px; margin-bottom: 8px; }
+  p { color: #94A3B8; max-width: 400px; line-height: 1.5; }
+  a.btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 24px;
+    border: 1px solid #2DD4BF;
+    color: #2DD4BF;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  .fallback { display: none; margin-top: 32px; }
+</style>
+</head>
+<body>
+<h1>Opening AudioWitness…</h1>
+<p>If AudioWitness is installed, it should open automatically.</p>
+
+<div class="fallback" id="fallback">
+  <p>AudioWitness doesn't appear to be installed on this device.</p>
+  <a class="btn" href="https://audiowitness.app">Get AudioWitness</a>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const m4a = params.get("m4a");
+  const json = params.get("json");
+  const title = params.get("title") || "";
+
+  if (m4a && json) {
+    const deepLink = `audiowitness://import?m4a=${m4a}&json=${json}&title=${encodeURIComponent(title)}`;
+    window.location.href = deepLink;
+
+    setTimeout(() => {
+      document.getElementById("fallback").style.display = "block";
+    }, 2000);
+  } else {
+    document.getElementById("fallback").style.display = "block";
+  }
+</script>
+</body>
+</html>
